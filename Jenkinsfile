@@ -47,14 +47,7 @@ pipeline {
         }
     }
 
-    post {
-        success {
-            echo "Pipeline completed successfully!"
-        }
-        failure {
-            echo "Pipeline failed. Check the logs for errors."
-        }
-    }
+    
     post { 
         always { 
             echo 'I will always say Hello again!'
