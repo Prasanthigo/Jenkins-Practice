@@ -1,5 +1,5 @@
 pipeline {
-    agent { node { label 'agent-1' } }  // Run on any available Jenkins agent
+    agent { node { label 'Agent-1' } }  // Run on any available Jenkins agent
 
     environment {
         PROJECT_NAME = "my-sample-project"
