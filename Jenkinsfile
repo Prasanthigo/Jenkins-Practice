@@ -11,6 +11,7 @@ pipeline {
             steps {
                 echo "Checking out the code..."
                 checkout scm
+                sh 'printenv'
             }
         }
 
