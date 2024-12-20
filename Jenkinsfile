@@ -99,7 +99,7 @@ pipeline {
         {
             
                 when {
-                    branch 'master'
+                  environment name: 'PROJECT_NAME', value: 'my-sample-project' 
                 }
                 steps {
                     echo "deploy to Prod"
