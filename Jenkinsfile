@@ -16,7 +16,17 @@ pipeline {
 
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
+    
+        
+
     stages {
+        stage('Checkout') {
+            steps {
+                echo "Checking out the code..."
+                checkout scm
+                sh 'printenv'
+            }
+        }
         stage('Example') {
             steps {
                 echo "Hello ${params.PERSON}"
@@ -30,16 +40,7 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
             }
         }
-    }
-
-    stages {
-        stage('Checkout') {
-            steps {
-                echo "Checking out the code..."
-                checkout scm
-                sh 'printenv'
-            }
-        }
+    
 
         stage('Build') {
             steps {
