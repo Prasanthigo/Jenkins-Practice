@@ -51,7 +51,7 @@ pipeline {
                 '''
             }
         }
-        stage('Example') {
+        stage('Example1') {
             environment { 
                 AUTH = credentials('centos-agent-1') 
             }
