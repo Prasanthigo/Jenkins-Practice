@@ -95,6 +95,17 @@ pipeline {
                 '''
             }
         }
+        stage('PROD Deploy')
+        {
+            
+                when {
+                    branch 'master'
+                }
+                steps {
+                    echo "deploy to Prod"
+                }
+    
+        }
     }
 
     
