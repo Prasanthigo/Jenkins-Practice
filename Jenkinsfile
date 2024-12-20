@@ -24,6 +24,15 @@ pipeline {
                 '''
             }
         }
+        stage('Example') {
+            environment { 
+                AUTH = credentials('centos-agent-1') 
+            }
+            steps {
+                sh 'printenv'
+            }
+        }
+    
 
         stage('Test') {
             steps {
